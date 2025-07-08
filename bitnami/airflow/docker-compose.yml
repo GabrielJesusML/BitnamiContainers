@@ -23,6 +23,8 @@ services:
     image: docker.io/bitnami/airflow:3
     environment:
       - AIRFLOW_COMPONENT_TYPE=scheduler
+      - AIRFLOW_FERNET_KEY=46BKJoQYlPPOexq0OhDZnIlNepKFf87WFwLbfzqDDho=
+      - AIRFLOW_SECRET_KEY=a25mQ1FHTUh3MnFRSk5KMEIyVVU2YmN0VGRyYTVXY08=      
       - AIRFLOW_DATABASE_NAME=bitnami_airflow
       - AIRFLOW_DATABASE_USERNAME=bn_airflow
       - AIRFLOW_DATABASE_PASSWORD=bitnami1
@@ -32,6 +34,8 @@ services:
     image: docker.io/bitnami/airflow:3
     environment:
       - AIRFLOW_COMPONENT_TYPE=triggerer
+      - AIRFLOW_FERNET_KEY=46BKJoQYlPPOexq0OhDZnIlNepKFf87WFwLbfzqDDho=
+      - AIRFLOW_SECRET_KEY=a25mQ1FHTUh3MnFRSk5KMEIyVVU2YmN0VGRyYTVXY08=      
       - AIRFLOW_DATABASE_NAME=bitnami_airflow
       - AIRFLOW_DATABASE_USERNAME=bn_airflow
       - AIRFLOW_DATABASE_PASSWORD=bitnami1
@@ -41,6 +45,8 @@ services:
     image: docker.io/bitnami/airflow:3
     environment:
       - AIRFLOW_COMPONENT_TYPE=dag-processor
+      - AIRFLOW_FERNET_KEY=46BKJoQYlPPOexq0OhDZnIlNepKFf87WFwLbfzqDDho=
+      - AIRFLOW_SECRET_KEY=a25mQ1FHTUh3MnFRSk5KMEIyVVU2YmN0VGRyYTVXY08=      
       - AIRFLOW_DATABASE_NAME=bitnami_airflow
       - AIRFLOW_DATABASE_USERNAME=bn_airflow
       - AIRFLOW_DATABASE_PASSWORD=bitnami1
@@ -50,6 +56,8 @@ services:
     image: docker.io/bitnami/airflow:3
     environment:
       - AIRFLOW_COMPONENT_TYPE=worker
+      - AIRFLOW_FERNET_KEY=46BKJoQYlPPOexq0OhDZnIlNepKFf87WFwLbfzqDDho=
+      - AIRFLOW_SECRET_KEY=a25mQ1FHTUh3MnFRSk5KMEIyVVU2YmN0VGRyYTVXY08=      
       - AIRFLOW_DATABASE_NAME=bitnami_airflow
       - AIRFLOW_DATABASE_USERNAME=bn_airflow
       - AIRFLOW_DATABASE_PASSWORD=bitnami1
@@ -59,8 +67,12 @@ services:
     image: docker.io/bitnami/airflow:3
     environment:
       - AIRFLOW_DATABASE_NAME=bitnami_airflow
+      - AIRFLOW_FERNET_KEY=46BKJoQYlPPOexq0OhDZnIlNepKFf87WFwLbfzqDDho=
+      - AIRFLOW_SECRET_KEY=a25mQ1FHTUh3MnFRSk5KMEIyVVU2YmN0VGRyYTVXY08=      
       - AIRFLOW_DATABASE_USERNAME=bn_airflow
       - AIRFLOW_DATABASE_PASSWORD=bitnami1
+      - AIRFLOW_PASSWORD=bitnami123
+      - AIRFLOW_USERNAME=user      
       - AIRFLOW_EXECUTOR=CeleryExecutor
     ports:
       - '8080:8080'
